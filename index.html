@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Workout Plans</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img class="logo2" src="logo1.jpg" alt="header img">
+        <h1>Beyond Fitness<br><span style="font-size:24px;"><i>Progress Over Perfection</i></span></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="background-blur"></div>
+<div class="content">
+    <main>
+        <h2 align="center" style="background-color:rgba(0, 0, 0, 0.5)">Your Journey to Fitness Starts Here</h2>
+        <p align="center" style="background-color:rgba(0, 0, 0, 0.5)">Whether you are just starting or are an experienced athlete, we have tailored workout plans for every fitness level.</p>
+    <div class="blurred">
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-images">
+                    <div class="carousel-image">
+                        <div class="card">
+                            <img src="chest.jpg" alt="Chest Workouts" />
+                            <h3><a href="chest.html">Chest Workouts</a></h3>
+                            <p>Build strength and muscle with our effective chest routines.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-image">
+                        <div class="card">
+                            <img src="abss.jpg" alt="Abs Workouts" />
+                            <h3><a href="abs.html">Abs Workouts</a></h3>
+                            <p>Get a strong core with these targeted abs exercises.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-image">
+                        <div class="card">
+                            <img src="legs.jpg" alt="Legs Workouts" />
+                            <h3><a href="legs.html">Legs Workouts</a></h3>
+                            <p>Strengthen your legs with our comprehensive workout plans.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+    </div>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>Welcome to BeyondFitness</h1>
+                <p>We're passionate about empowering individuals to achieve their fitness goals.<br> Our team of experts provides personalized workout guidance and support..</p>
+            <hr><h2>Our Mission</h2>
+            <p><i>Make Fitness Accessible, Enjoyable, and Effective for everyone.</i></p> <hr> 
+            <div style="display:inline-block;"><h2>Meet Our Team</h2>  
+            <h3><u><b>ABHINAND P K</b></u></h3>
+                <p>Founder & Head Trainer</p>
+            <h3><u><b>VISRUTH N R</b></u></h3>
+            <p>Nutritionist & Wellness Coach</p></div>
+            <img src="founders3.jpg" alt="the founders picture" height="200px" style="padding-left:500px;">
+                <hr>
+                <div class="quote-container">
+                    <img src="feedback.png" alt="customer review" class="quote-image">
+                    <blockquote class="quote-text">
+                        "Joining this gym was the best decision I ever made.<br> I've lost weight, gained confidence, and made lifelong friends." - Ananthu ,Geck Student          </blockquote>
+                </div>
+                
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need further information, feel free to reach out to us at <a href="mailto:info@BeyondFitness.com">info@BeyondFitness.com</a>.</p>
+            
+            <h3 align = "center">Feedback</h3>
+            <form action="submit_feedback.php" method="POST">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="feedback">Your Feedback:</label><br>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea><br>
+                
+                <input type="submit" value="Submit Feedback">
+            </form>
+        </section>
+    </main>
+</div>
+    <footer>
+        <p>&copy; 2024 Beyond Fitness Inc.</p>
+        <p>Follow us on social media:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/BeyondFitness"><i class="fab fa-facebook"></i> </a></li>
+            <li><a href="https://www.instagram.com/BeyondFitnesss"><i class="fab fa-instagram"></i> </a></li>
+            <li><a href="https://www.twitter.com/BeyondFitness"><i class="fab fa-twitter"></i> </a></li>
+        </ul>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const backgrounds = [
+            'url(abc.jpg)', // Background for Chest Workouts
+            'url(def.jpg)',    // Background for Abs Workouts
+            'url(ghi.jpg)'    // Background for Legs Workouts
+        ];
+    
+        function moveCarousel(direction) {
+            const images = document.querySelector('.carousel-images');
+            const totalImages = document.querySelectorAll('.carousel-image').length;
+            currentIndex = (currentIndex + direction + totalImages) % totalImages;
+            const offset = -currentIndex * 100; // Move by 100% for each image
+            images.style.transform = `translateX(${offset}%)`;
+    
+            // Change the background
+            document.body.style.backgroundImage = backgrounds[currentIndex];
+        }
+    
+        // Set initial background
+        document.body.style.backgroundImage = backgrounds[currentIndex];
+    </script>
+</body>
+</html>
