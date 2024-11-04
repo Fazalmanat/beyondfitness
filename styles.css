@@ -336,4 +336,8 @@ form input[type="submit"]:hover {
     section p {
         font-size: 1em; /* Adjust paragraph size */
     }
+    .meetteam{
+        display:flex;
+        justify:center;
+    }
 }
