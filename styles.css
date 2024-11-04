@@ -216,7 +216,7 @@ section p {
 
     .team-image {
         padding-left: 0; /* Remove extra padding on smaller screens */
-        max-width: 200px; /* Let the image take full width if needed */
+        max-width: 10%; /* Let the image take full width if needed */
     }
 }
 
