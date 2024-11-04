@@ -189,34 +189,37 @@ section p {
     font-size: 1.1em;
     line-height: 1.8; 
 }
+/* Container for the team section */
 .team-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
+    padding: 20px;
 }
 
 /* Team info section */
 .meetteam {
-    flex: 1; /* Allows this section to take up remaining space */
+    flex: 1;
 }
 
 /* Team image styling */
 .team-image {
-    max-width: 200px; /* Adjust based on your needs */
+    max-width: 200px; /* Limits image size on larger screens */
     height: auto;
 }
 
-/* Media Query for smaller screens */
+/* Mobile styling: stack vertically */
 @media (max-width: 768px) {
     .team-container {
-        flex-direction: column; /* Stacks items vertically */
-        align-items: center; /* Centers items horizontally */
-        text-align: center; /* Centers text */
+        flex-direction: column; /* Stacks items vertically on smaller screens */
+        align-items: center;
+        text-align: center;
     }
 
     .team-image {
-        padding-left: 0; /* Remove extra padding on smaller screens */
-        max-width: 10%; /* Let the image take full width if needed */
+        max-width: 80%; /* Limits the image width on mobile screens */
+        height: auto;
     }
 }
 
