@@ -338,6 +338,6 @@ form input[type="submit"]:hover {
     }
     .meetteam{
         display:flex;
-        justify:center;
+        flex-direction:column;
     }
 }
