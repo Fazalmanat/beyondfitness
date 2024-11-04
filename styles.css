@@ -189,6 +189,9 @@ section p {
     font-size: 1.1em;
     line-height: 1.8; 
 }
+.meetteam{
+    display:inline-block;
+}
 .quote-container {
     display: flex;
     align-items: center; /* Centers the quote vertically with the image */
@@ -339,5 +342,6 @@ form input[type="submit"]:hover {
     .meetteam{
         display:flex;
         flex-direction:column;
+        align-items:center;
     }
 }
